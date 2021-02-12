@@ -8,6 +8,7 @@
     <title>Harry Potter - Top Trumps Game</title>
 </head>
 <body>
+
     <header>
         <h1>Top Trump Game for Harry Potter Fans</h1>
         <h2>Pick your greatest features to win the Game</h2>
@@ -15,37 +16,47 @@
     
     <main>
 
-        <div>
+        <div class="playerCont">
             <div class="player1" id="player1">Player 1</div>
-            <div class="cardCont">
-                <div class="attribute" id="name">
-                    <h3>Name</h2>
-                    <h3 class="charName" id="charName"></h3>
-                </div>
-                <div class="attribute" id="magic">
-                    <h3>Magic</h2>
-                    <h3 class="levels" id="magicLevel">30</h3>
+                <div class="cardCont">
+                    <img src="/img/ChoChang.jpg" alt="Cho Chang" class="charImg" id="charImg1">
+                    <div class="attrCont">
+                        <div class="attribute" id="name">
+                            <h3>Name</h2>
+                            <h3 class="charName" id="charName">Cho</h3>
+                        </div>
+                        <div class="attribute" id="magic">
+                            <h3>Magic</h2>
+                            <h3 class="levels" id="magicLevel">30</h3>
+                        </div>
                 </div>
             </div>
         </div>
         
-        <div>
-
+        
+        <div class="playerCont">
             <div class="player2" id="player2">Player 2</div>
-            <div class="cardCont">
-                <div class="attribute" id="name">
-                    <h3>Name</h2>
-                    <h3 class="charName" id="charName"></h3>
-                </div>
-                <div class="attribute" id="magic">
-                    <h3>Magic</h2>
-
-                    <h3 class="levels" id="magicLevel">30</h3>
+                <div class="cardCont">
+                    <img src="/img/argusFilch.jpg" alt="Argus Filch" class="charImg" id="charImg2">
+                    <div class="attrCont">
+                        <div class="attribute" id="name">
+                            <h3>Name</h2>
+                            <h3 class="charName" id="charName">Argus</h3>
+                        </div>
+                        <div class="attribute" id="magic">
+                            <h3>Magic</h2>
+                            <h3 class="levels" id="magicLevel">30</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         
     </main>
+
+    <footer>
+        Made by <a href="https://github.com/mafromist">@mafromist</a> 
+    </footer>
     
     <script src="app.js"></script>
 </body>
