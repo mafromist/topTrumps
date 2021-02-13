@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/227095ec8d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../topTrumps/main.css">
     <title>Harry Potter - Top Trumps Game</title>
 </head>
 <body>
@@ -18,10 +18,12 @@
     <main>
 
         <div class="playerCont">
+
             <div class="players" id="player1">Player 1</div>
                 <div class="charImg">
-                    <img src="/img/ChoChang.jpg" alt="Cho Chang" class="charImg" id="charImg1">
+                    <img src="../topTrumps/img/ChoChang.jpg" alt="Cho Chang" class="charImg" id="charImg1">
                 </div>
+
                 <div class="attrCont">
                     <div class="attribute" id="name">
                         <h4>Character Name
@@ -29,60 +31,77 @@
                     </div>
                     <div class="attribute" id="magic">
                         <h4>Magic <i class="fas fa-magic"></i></i>
-                        <span class="levels" id="magicLevel">30</span></h4>
+                        <span class="levels" id="p1magicLevel">30</span></h4>
                     </div>
                     <div class="attribute" id="cunning">
                         <h4>Cunning <i class="fas fa-hat-wizard"></i>
-                        <span class="levels" id="cunningLevel">30</span></h4>
+                        <span class="levels" id="p1cunningLevel">30</span></h4>
                     </div>
                     <div class="attribute" id="courage">
                         <h4>Courage <i class="fas fa-quidditch"></i>
-                        <span class="levels" id="cucourageLevel">30</span></h4>
+                        <span class="levels" id="p1courageLevel">30</span></h4>
                     </div>
                     <div class="attribute" id="wisdom">
                         <h4>Wisdom <i class="fas fa-mountain"></i>
-                        <span class="levels" id="wisdomLevel">30</span></h4>
+                        <span class="levels" id="p1wisdomLevel">30</span></h4>
                     </div>
                     <div class="attribute" id="temper">
                         <h4>Temper <i class="fas fa-book-dead"></i>
-                        <span class="levels" id="temperLevel">30</span></h4>
+                        <span class="levels" id="p1temperLevel">30</span></h4>
                     </div>
+                </div>
+
+                <div class="player1ScoreDiv">
+                    <h3 class="p1Score">Score
+                    <span id="p1Score">30</span></h3>
+                </div>
+
             </div>
         </div>
         
         
         <div class="playerCont">
+
             <div class="players" id="player2">Player 2</div>
+
                 <div class="charImg">
-                    <img src="/img/argusFilch.jpg" alt="Argus Filch" class="charImg" id="charImg2">
+                    <img src="../topTrumps/img/argusFilch.jpg" alt="Argus Filch" class="charImg" id="charImg2">
                 </div>
+
                 <div class="attrCont">
                     <div class="attribute" id="name">
                         <h4>Character Name
-                        <h3 class="charName" id="charName">Argus</h3></h4>
+                        <h3 class="charName" id="p1charName">Argus</h3></h4>
                     </div>
+
                     <div class="attribute" id="magic">
                         <h4>Magic <i class="fas fa-magic"></i></i>
-                        <span class="levels" id="magicLevel">30</span></h4>
+                        <span class="levels" id="p2magicLevel">30</span></h4>
                     </div>
                     <div class="attribute" id="cunning">
                         <h4>Cunning <i class="fas fa-hat-wizard"></i>
-                        <span class="levels" id="cunningLevel">30</span></h4>
+                        <span class="levels" id="p2cunningLevel">30</span></h4>
                     </div>
                     <div class="attribute" id="courage">
                         <h4>Courage <i class="fas fa-quidditch"></i></i>
-                        <span class="levels" id="courageLevel">30</span></h4>
+                        <span class="levels" id="p2courageLevel">30</span></h4>
                     </div>
                     <div class="attribute" id="wisdom">
                         <h4>Wisdom <i class="fas fa-mountain"></i>
-                        <span class="levels" id="wisdomLevel">30</span></h4>
+                        <span class="levels" id="p2wisdomLevel">30</span></h4>
                     </div>
                     <div class="attribute" id="temper">
                         <h4>Temper <i class="fas fa-book-dead"></i>
-                        <span class="levels" id="temperLevel">30</span></h4>
+                        <span class="levels" id="p2temperLevel">30</span></h4>
                     </div>
                 </div>
-            </div>
+
+                <div class="player2ScoreDiv">
+                    <h3 class="p2Score">Score
+                    <span id="p2Score">10</span></h3>
+                </div>
+
+            </div>  
         </div>
         
     </main>
@@ -91,6 +110,6 @@
         Some magic from  <a href="https://github.com/mafromist">@mafromist</a> 
     </footer>
     
-    <script src="app.js"></script>
+    <script src="../topTrumps/app.js"></script>
 </body>
 </html>
