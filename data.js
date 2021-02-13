@@ -1,46 +1,32 @@
-var papaparse = require("papaparse");
+/* async function getCard() {
+    const response = await fetch("./database.json");
+    const data = await response.json();
+    console.log(data);
+}
 
-Papa.parse("../topTrumps/data.csv", config);
+getCard();
+ */
 
-
-
-
-console.log(papaparse);
-
-
-
-
-
-
-
-///OLD CODES///
-/* const csv = require('csv-parser');
-const fs = require('fs');
-const results = [];
-
-fs.createReadStream('data.csv')
-    .pipe(csv(
-        ['Name', 'Magic', 'Cunning', 'Courage', 'Wisdom', 'Temper']
-    ))
-    .on('data', (data) => results.push(data))
-    .on('end', () => {
-    console.log(results[2]['Name']);
-})
+/* 
+fetch('./database.json')
+  .then(response => response.json())
+  .then(obj => console.log(obj)) */
 
 
+const myInit = { method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                mode: 'cors',
+                cachhe: 'default' 
+            };
 
-/* d3.csv("/data.csv", function(h) {
-    return {
-      name : h.individual,
-      magic: +h.magic,
-      cunning : +h.cunning,
-      courage : +h.courage,
-      wisdom : +h.courage,
-      temper : +h.temper
-    };
-  }).then(function(data) {
-    console.log(data[0]);
-  }); 
-  
-  
-  */
+let myRequest = new Request("database.json", myInit);
+
+fetch(myRequest)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data.magic)
+    })
