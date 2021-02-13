@@ -1,4 +1,4 @@
-[
+const cardData = [
   {
     "name": "Argus Filch",
     "imgs": "topTrumps/img/argusFilch.jpg",
@@ -260,4 +260,5 @@
     "wisdom": 44,
     "temper": 19
   }
+
 ]
