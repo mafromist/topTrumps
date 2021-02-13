@@ -1,4 +1,20 @@
-const csv = require('csv-parser');
+var papaparse = require("papaparse");
+
+Papa.parse("../topTrumps/data.csv", config);
+
+
+
+
+console.log(papaparse);
+
+
+
+
+
+
+
+///OLD CODES///
+/* const csv = require('csv-parser');
 const fs = require('fs');
 const results = [];
 
