@@ -4,12 +4,12 @@
     font-family: 'Harry Potter Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Harry Potter Regular'), url('/fonts/HARRP___.woff') format('woff');
+    src: local('Harry Potter Regular'), url('../topTrumps/fonts/HARRP___.woff') format('woff');
     }
 
 
 body {
-    background-image: url(/img/bgImg3.png);
+    background-image: url(../topTrumps/img/bgImg3.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -33,6 +33,7 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: -3%;
 }
 
 footer{
@@ -100,11 +101,18 @@ h4 {
     width: 90%;
     margin: 2px auto;
     font-family: 'Barlow', sans-serif;
+    color: #598392;
 }
 
 .fas{
    color: #01161E;
    padding: 0 3%;
+}
+
+.p1Score, .p2Score {
+    font-family: 'Harry Potter Regular';
+    color: white;
+    font-size: 1.5em;
 }
 
 #name {
@@ -115,6 +123,3 @@ h4 {
     text-decoration-line: underline;
 }
 
-#magic, #cunning, #courage, #wisdom, #temper{
-    color: #598392;
-}
