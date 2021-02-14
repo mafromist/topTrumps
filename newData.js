@@ -283,17 +283,8 @@ class Card {
 
 }
 
-const p1 = new Card ();
-const p2 = new Card ();
-
-console.log(p1.name)
-console.log(p1.img)
-console.log(p1.magic)
-
-console.log(p2.name)
-console.log(p2.img)
-console.log(p2.magic)
-
+let p1 = new Card ();
+let p2 = new Card ();
 
 
 
