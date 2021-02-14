@@ -33,16 +33,18 @@ let player1;
 let player1Score;
 
 //DOM selection from HTML for player and choosen card and an attribute
-let p1Score = document.querySelector("#p1Score");
-let charImg1 = document.querySelector("#charImg1");
-let charName = document.querySelector("#charName");
-let p1magicLevel = document.querySelector("#magicLevel");
+const p1Score = document.querySelector("#p1Score");
+const charImg1 = document.querySelector("#charImg1");
+charImg1 = p1.img;
+console.log(charImg1);
+const charName = document.querySelector("#charName");
+const p1magicLevel = document.querySelector("#magicLevel");
 
-const p1charName = document.querySelector("#p1charName");
+/* const p1charName = document.querySelector("#p1charName");
 const charImg1 = document.querySelector("#charImg1");
 const p1magicLevel = document.querySelector("#p1magicLevel");
 const p1Score = document.querySelector("#p1Score");
-
+ */
 
 
 
