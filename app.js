@@ -38,7 +38,10 @@ let charImg1 = document.querySelector("#charImg1");
 let charName = document.querySelector("#charName");
 let p1magicLevel = document.querySelector("#magicLevel");
 
-
+const p1charName = document.querySelector("#p1charName");
+const charImg1 = document.querySelector("#charImg1");
+const p1magicLevel = document.querySelector("#p1magicLevel");
+const p1Score = document.querySelector("#p1Score");
 
 
 
