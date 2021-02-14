@@ -1,7 +1,7 @@
 const cardData = [
     {
       "name": "Argus Filch",
-      "imgs": "topTrumps/img/argusFilch.jpg",
+      "imgs": "../topTrumps/img/argusFilch.jpg",
       "magic": 0,
       "cunning": 17,
       "courage": 10,
@@ -10,7 +10,7 @@ const cardData = [
     },
     {
       "name": "Severus Snape",
-      "imgs": "topTrumps/img/Severus_Snape.jpg",
+      "imgs": "../topTrumps/img/Severus_Snape.jpg",
       "magic": 120,
       "cunning": 45,
       "courage": 80,
@@ -19,7 +19,7 @@ const cardData = [
     },
     {
       "name": "Draco Malfoy",
-      "imgs": "topTrumps/img/Draco_Malfoy.png",
+      "imgs": "../topTrumps/img/Draco_Malfoy.png",
       "magic": 60,
       "cunning": 35,
       "courage": 30,
@@ -28,7 +28,7 @@ const cardData = [
     },
     {
       "name": "Rubeus Hagrid",
-      "imgs": "topTrumps/img/Rubeushagrid.png",
+      "imgs": "../topTrumps/img/Rubeushagrid.png",
       "magic": 12,
       "cunning": 13,
       "courage": 45,
@@ -37,7 +37,7 @@ const cardData = [
     },
     {
       "name": "Luna Lovegood",
-      "imgs": "topTrumps/img/Luna_profile.jpg",
+      "imgs": "../topTrumps/img/Luna_profile.jpg",
       "magic": 50,
       "cunning": 18,
       "courage": 65,
@@ -46,7 +46,7 @@ const cardData = [
     },
     {
       "name": "Nigel",
-      "imgs": "topTrumps/img/Nigel.jpg",
+      "imgs": "../topTrumps/img/Nigel.jpg",
       "magic": 45,
       "cunning": 16,
       "courage": 30,
@@ -55,7 +55,7 @@ const cardData = [
     },
     {
       "name": "Lord Voldemort",
-      "imgs": "topTrumps/img/VoldemortHeadshot_DHP1.png",
+      "imgs": "../topTrumps/img/VoldemortHeadshot_DHP1.png",
       "magic": 120,
       "cunning": 42,
       "courage": 0,
@@ -64,7 +64,7 @@ const cardData = [
     },
     {
       "name": "Ginny Weasley",
-      "imgs": "topTrumps/img/Ginny_Weasley_hbp_promo.jpg",
+      "imgs": "../topTrumps/img/Ginny_Weasley_hbp_promo.jpg",
       "magic": 50,
       "cunning": 22,
       "courage": 65,
@@ -73,7 +73,7 @@ const cardData = [
     },
     {
       "name": "Narcissa Malfoy",
-      "imgs": "topTrumps/img/Narcissa_Malfoy.png",
+      "imgs": "../topTrumps/img/Narcissa_Malfoy.png",
       "magic": 65,
       "cunning": 28,
       "courage": 10,
@@ -82,7 +82,7 @@ const cardData = [
     },
     {
       "name": "James Potter",
-      "imgs": "topTrumps/img/JamesPotter.jpg",
+      "imgs": "../topTrumps/img/JamesPotter.jpg",
       "magic": 75,
       "cunning": 14,
       "courage": 43,
@@ -91,7 +91,7 @@ const cardData = [
     },
     {
       "name": "Alecto Carrow",
-      "imgs": "topTrumps/img/Alecto-DH2.jpg",
+      "imgs": "../topTrumps/img/Alecto-DH2.jpg",
       "magic": 60,
       "cunning": 30,
       "courage": 20,
@@ -100,7 +100,7 @@ const cardData = [
     },
     {
       "name": "Hermione Granger",
-      "imgs": "topTrumps/img/Hermionedhface.jpg",
+      "imgs": "../topTrumps/img/Hermionedhface.jpg",
       "magic": 88,
       "cunning": 32,
       "courage": 70,
@@ -109,7 +109,7 @@ const cardData = [
     },
     {
       "name": "Bellatrix Lestrange",
-      "imgs": "topTrumps/img/BellatrixLestrange.png",
+      "imgs": "../topTrumps/img/BellatrixLestrange.png",
       "magic": 112,
       "cunning": 36,
       "courage": 4,
@@ -118,7 +118,7 @@ const cardData = [
     },
     {
       "name": "Griphook",
-      "imgs": "topTrumps/img/Griphook.png",
+      "imgs": "../topTrumps/img/Griphook.png",
       "magic": 40,
       "cunning": 30,
       "courage": 30,
@@ -127,7 +127,7 @@ const cardData = [
     },
     {
       "name": "Aberforth Dumbledore",
-      "imgs": "topTrumps/img/AberforthInfobox.jpg",
+      "imgs": "../topTrumps/img/AberforthInfobox.jpg",
       "magic": 40,
       "cunning": 32,
       "courage": 45,
@@ -136,7 +136,7 @@ const cardData = [
     },
     {
       "name": "Feurir Greyback",
-      "imgs": "topTrumps/img/Fenrirgreyback.png",
+      "imgs": "../topTrumps/img/Fenrirgreyback.png",
       "magic": 65,
       "cunning": 30,
       "courage": 9,
@@ -145,7 +145,7 @@ const cardData = [
     },
     {
       "name": "Minerva McGonagall",
-      "imgs": "topTrumps/img/ProfessorMcGonagall-HBP.jpg",
+      "imgs": "../topTrumps/img/ProfessorMcGonagall-HBP.jpg",
       "magic": 107,
       "cunning": 36,
       "courage": 45,
@@ -154,7 +154,7 @@ const cardData = [
     },
     {
       "name": "Percy Weasley",
-      "imgs": "topTrumps/img/Percy_WeasleyDH.jpg",
+      "imgs": "../topTrumps/img/Percy_WeasleyDH.jpg",
       "magic": 65,
       "cunning": 15,
       "courage": 40,
@@ -163,7 +163,7 @@ const cardData = [
     },
     {
       "name": "Cho Chang",
-      "imgs": "topTrumps/img/ChoChang.jpg",
+      "imgs": "../topTrumps/img/ChoChang.jpg",
       "magic": 50,
       "cunning": 12,
       "courage": 55,
@@ -172,7 +172,7 @@ const cardData = [
     },
     {
       "name": "Neville Longbottom",
-      "imgs": "topTrumps/img/NevilleLongbottom.jpg",
+      "imgs": "../topTrumps/img/NevilleLongbottom.jpg",
       "magic": 68,
       "cunning": 36,
       "courage": 75,
@@ -181,7 +181,7 @@ const cardData = [
     },
     {
       "name": "Mr Ollivander",
-      "imgs": "topTrumps/img/GarrickOllivander.png",
+      "imgs": "../topTrumps/img/GarrickOllivander.png",
       "magic": 65,
       "cunning": 20,
       "courage": 40,
@@ -190,7 +190,7 @@ const cardData = [
     },
     {
       "name": "Ron Weasley",
-      "imgs": "topTrumps/img/RonWeasley.jpg",
+      "imgs": "../topTrumps/img/RonWeasley.jpg",
       "magic": 80,
       "cunning": 25,
       "courage": 70,
@@ -199,7 +199,7 @@ const cardData = [
     },
     {
       "name": "Harry Potter",
-      "imgs": "topTrumps/img/Harry_Potter.jpg",
+      "imgs": "../topTrumps/img/Harry_Potter.jpg",
       "magic": 95,
       "cunning": 40,
       "courage": 80,
@@ -208,7 +208,7 @@ const cardData = [
     },
     {
       "name": "Seamus Finnegan",
-      "imgs": "topTrumps/img/Seamus_FinniganDH2.jpg",
+      "imgs": "../topTrumps/img/Seamus_FinniganDH2.jpg",
       "magic": 45,
       "cunning": 20,
       "courage": 50,
@@ -217,7 +217,7 @@ const cardData = [
     },
     {
       "name": "Sybill Trelawney",
-      "imgs": "topTrumps/img/SybillTrelawney.jpg",
+      "imgs": "../topTrumps/img/SybillTrelawney.jpg",
       "magic": 50,
       "cunning": 11,
       "courage": 40,
@@ -226,7 +226,7 @@ const cardData = [
     },
     {
       "name": "Nagini",
-      "imgs": "topTrumps/img/Nagini_PM.png",
+      "imgs": "../topTrumps/img/Nagini_PM.png",
       "magic": 0,
       "cunning": 40,
       "courage": 1,
@@ -235,7 +235,7 @@ const cardData = [
     },
     {
       "name": "Dean Thomas",
-      "imgs": "topTrumps/img/DeanThomas.jpg",
+      "imgs": "../topTrumps/img/DeanThomas.jpg",
       "magic": 45,
       "cunning": 20,
       "courage": 50,
@@ -244,7 +244,7 @@ const cardData = [
     },
     {
       "name": "Gregory Goyle",
-      "imgs": "topTrumps/img/Gregory_Goyle.jpg",
+      "imgs": "../topTrumps/img/Gregory_Goyle.jpg",
       "magic": 18,
       "cunning": 20,
       "courage": 7,
@@ -253,7 +253,7 @@ const cardData = [
     },
     {
       "name": "Amycus Carrow",
-      "imgs": "topTrumps/img/Amycus_Carrow.png",
+      "imgs": "../topTrumps/img/Amycus_Carrow.png",
       "magic": 59,
       "cunning": 31,
       "courage": 20,
@@ -275,6 +275,10 @@ class Card {
         this.name = cardData[cardNum].name;
         this.img = cardData[cardNum].imgs;
         this.magic = cardData[cardNum].magic;
+        this.cunning = cardData[cardNum].cunning;
+        this.courage = cardData[cardNum].courage;
+        this.wisdom = cardData[cardNum].wisdom;
+        this.temper = cardData[cardNum].temper;
     }
 
 }
