@@ -33,25 +33,53 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     margin-top: -3%;
 }
 
 footer{
+    margin: auto;
+    margin-top: -5%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    height: 4vh;
-    width: 100%;
+    width: 20vw;
     font-family: 'Harry Potter Regular';
     color: gold;
     font-size: 1.2em;
 }
 
-footer > a {
+.newGameBtn {
+    background-color: rgba(89, 89, 89, 0.762);
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#newGameBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    color: #aec3b0;
+    font-family: 'Harry Potter Regular';
+    margin: 5px auto;
+}
+
+.credits {
+    display: flex;
+    text-decoration-line: none;
+    color: gold;
+    margin-top: 5%;
+    }
+
+.credits > a {
     padding-left: 5px;
     text-decoration-line: none;
     color: gold;
-}
+    }
 
 h3 {
     line-height: 0.7;
