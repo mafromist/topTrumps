@@ -74,14 +74,12 @@ let p2Card = () => {
     p2temperLevel.textContent = p2.temper;
 }
 
-const gameInit = () => {
-    p1Card();
-    p2Card();
-}
 
-gameInit();
 
-//New Game button
+
+//Start and New Game button
+
+
 
 const newGameBtn = document.querySelector("#newGameBtn");
 
@@ -89,7 +87,32 @@ newGameBtn.addEventListener('click', event => {
     window.location.reload();
 });
 
+async function gameInit () {
+    await gameWin();
+    p1Card();
+    p2Card();
+}
 
+// Game Rules for Win and Lose - compare and add score and delete the card
+
+//  Compare the levels
+const gameWin = () => {
+    setTimeout( () => {
+        if(p1.magic > p2.magic) {
+            alert("P1 won the turn");
+            pScore1 += 1;
+            player1Score.textContent = pScore1;
+        } else if (p2.magic > p1.magic) {
+            alert("P2 won the turn");
+            pScore2 += 1;
+            player2Score.textContent = pScore2;
+        } else {
+            alert("Tie!");
+        }
+    }, 1500);
+}    
+
+gameInit();
 
 
 
@@ -102,3 +125,4 @@ newGameBtn.addEventListener('click', event => {
     //add a class to close the card so whose turn cannot see the other card
         therefore the game could be more enjoyable if you won't see the other card values
 
+*/
