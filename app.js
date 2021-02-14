@@ -14,7 +14,9 @@ If the values are the same,
 The winning player of the hand continues to choose until they lose.
 
 */
-
+/*
+const { current } = require("tap");
+*/
 // 30 cards random HarryP characters with 5 attributes fetched from data.csv
     //add imgs links into csv
 // creating 2 players 
@@ -28,9 +30,6 @@ The winning player of the hand continues to choose until they lose.
     //give random numbers to the attribute            
     // add score to the player1Score         
 
-//define players and score
-let player1;
-let pScore1;
 
 //DOM selection from HTML for player and choosen card and an attribute
 const p1charName = document.querySelector("#p1charName");
@@ -76,10 +75,16 @@ let p2Card = () => {
 
 
 
-
 //Start and New Game button
+//define players and score
+
+let currentPlayer;
+
+const pickAPlayer = () => Math.round(Math.random() + 1);
 
 
+let pScore1 = 0;
+let pScore2 = 0;
 
 const newGameBtn = document.querySelector("#newGameBtn");
 
@@ -87,32 +92,55 @@ newGameBtn.addEventListener('click', event => {
     window.location.reload();
 });
 
-async function gameInit () {
-    await gameWin();
+const gameInit = () => {
+    currentPlayer = pickAPlayer();
+    console.log(currentPlayer)
     p1Card();
     p2Card();
 }
 
+gameInit();
+
 // Game Rules for Win and Lose - compare and add score and delete the card
 
 //  Compare the levels
-const gameWin = () => {
-    setTimeout( () => {
+const compareMagicLevel = () => {
         if(p1.magic > p2.magic) {
             alert("P1 won the turn");
             pScore1 += 1;
-            player1Score.textContent = pScore1;
+            player1Score.textContent = `${pScore1}`;
+            currentPlayer = 1;
+            console.log(currentPlayer);
         } else if (p2.magic > p1.magic) {
             alert("P2 won the turn");
             pScore2 += 1;
-            player2Score.textContent = pScore2;
+            player2Score.textContent = `${pScore2}`;
+            currentPlayer = 2;
+            console.log(currentPlayer);
         } else {
             alert("Tie!");
+            console.log(currentPlayer);
         }
-    }, 1500);
-}    
+}  
 
-gameInit();
+//Magic Level Comparison
+
+const checkMagic = document.querySelector(".magic");
+
+checkMagic.addEventListener("click", () => {
+    if(currentPlayer === 1) {
+        compareMagicLevel();
+        p2Card();
+    } else {
+        compareMagicLevel();
+        p1Card()
+    }
+});
+
+//it doesn't change the card after the result
+
+
+
 
 
 
