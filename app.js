@@ -81,6 +81,18 @@ const gameInit = () => {
 
 gameInit();
 
+//New Game button
+
+const newGameBtn = document.querySelector("#newGameBtn");
+
+newGameBtn.addEventListener('click', event => {
+    window.location.reload();
+});
+
+
+
+
+
 
 ///// JS TIPS /////
 
