@@ -30,14 +30,64 @@ The winning player of the hand continues to choose until they lose.
 
 //define players and score
 let player1;
-let player1Score;
+let pScore1;
 
 //DOM selection from HTML for player and choosen card and an attribute
-let p1Score = document.querySelector("#p1Score");
-let charImg1 = document.querySelector("#charImg1");
-let charName = document.querySelector("#charName");
-let p1magicLevel = document.querySelector("#magicLevel");
+const p1charName = document.querySelector("#p1charName");
+const charImg1 = document.querySelector("#charImg1");
+const p1magicLevel = document.querySelector("#p1magicLevel");
+const p1cunningLevel = document.querySelector("#p1cunningLevel");
+const p1courageLevel = document.querySelector("#p1courageLevel");
+const p1wisdomLevel = document.querySelector("#p1wisdomLevel");
+const p1temperLevel = document.querySelector("#p1temperLevel");
+const player1Score = document.querySelector("#p1Score");
 
+const p2charName = document.querySelector("#p2charName");
+const charImg2 = document.querySelector("#charImg2");
+const p2magicLevel = document.querySelector("#p2magicLevel");
+const p2cunningLevel = document.querySelector("#p2cunningLevel");
+const p2courageLevel = document.querySelector("#p2courageLevel");
+const p2wisdomLevel = document.querySelector("#p2wisdomLevel");
+const p2temperLevel = document.querySelector("#p2temperLevel");
+const player2Score = document.querySelector("#p2Score");
+
+
+let p1Card = () => {
+    p1charName.textContent = p1.name;
+    charImg1.src = p1.img;
+    charImg1.alt = p1.name;
+    p1magicLevel.textContent = p1.magic;
+    p1cunningLevel.textContent = p1.cunning;
+    p1courageLevel.textContent = p1.courage;
+    p1wisdomLevel.textContent = p1.wisdom;
+    p1temperLevel.textContent = p1.temper;
+}
+
+let p2Card = () => {
+    p2charName.textContent = p2.name;
+    charImg2.src = p2.img;
+    charImg2.alt = p2.name;
+    p2magicLevel.textContent = p2.magic;
+    p2cunningLevel.textContent = p2.cunning;
+    p2courageLevel.textContent = p2.courage;
+    p2wisdomLevel.textContent = p2.wisdom;
+    p2temperLevel.textContent = p2.temper;
+}
+
+const gameInit = () => {
+    p1Card();
+    p2Card();
+}
+
+gameInit();
+
+//New Game button
+
+const newGameBtn = document.querySelector("#newGameBtn");
+
+newGameBtn.addEventListener('click', event => {
+    window.location.reload();
+});
 
 
 
