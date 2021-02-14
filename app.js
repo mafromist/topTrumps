@@ -48,5 +48,7 @@ let p1magicLevel = document.querySelector("#magicLevel");
 
 // changing the src of an Img property => charImg1.src = "../topTrumps/img/argusFilch.jpg"
 
-
+/* extras 
+    //add a class to close the card so whose turn cannot see the other card
+        therefore the game could be more enjoyable if you won't see the other card values
 
