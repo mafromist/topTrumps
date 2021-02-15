@@ -18,9 +18,10 @@
     
     <main>
 
-        <div class="playerCont">
+        <div class="playerCont" id="p1Cont">
 
-            <div class="players" id="player1">Player 1</div>
+            <div class="players" id="player1"><span>Player 1</span>
+
                 <div class="charImg">
                     <img src="../topTrumps/img/ChoChang.jpg" alt="Cho Chang" class="charImg" id="charImg1">
                 </div>
@@ -56,13 +57,12 @@
                     <h3 class="p1Score">Score
                     <span id="p1Score"></span></h3>
                 </div>
-
             </div>
         </div>
         
-        <div class="playerCont">
+        <div class="playerCont" id="p2Cont">
 
-            <div class="players" id="player2">Player 2</div>
+            <div class="players" id="player2"><span>Player 2</span>
 
                 <div class="charImg">
                     <img src="../topTrumps/img/argusFilch.jpg" alt="Argus Filch" class="charImg" id="charImg2">
@@ -73,7 +73,6 @@
                         <h4>Character Name
                         <h3 class="charName" id="p2charName">Argus</h3></h4>
                     </div>
-
                     <div class="attribute magic">
                         <h4>Magic <i class="fas fa-magic"></i></i>
                         <span class="levels" id="p2magicLevel">30</span></h4>
@@ -100,7 +99,6 @@
                     <h3 class="p2Score">Score
                     <span id="p2Score"></span></h3>
                 </div>
-
             </div>  
         </div>
         
@@ -108,6 +106,9 @@
 
     <footer>
         <div class="gameButtons">
+            <div>
+                <h3>Turn for <span id="turnStatus"></span></h3>
+            </div>    
             <div class="newGameBtn">
                 <button id="newGameBtn">New Game</button>
             </div>

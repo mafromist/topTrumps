@@ -50,31 +50,6 @@ const p2wisdomLevel = document.querySelector("#p2wisdomLevel");
 const p2temperLevel = document.querySelector("#p2temperLevel");
 const player2Score = document.querySelector("#p2Score");
 
-
-let p1Card = () => {
-    p1charName.textContent = p1.name;
-    charImg1.src = p1.img;
-    charImg1.alt = p1.name;
-    p1magicLevel.textContent = p1.magic;
-    p1cunningLevel.textContent = p1.cunning;
-    p1courageLevel.textContent = p1.courage;
-    p1wisdomLevel.textContent = p1.wisdom;
-    p1temperLevel.textContent = p1.temper;
-}
-
-let p2Card = () => {
-    p2charName.textContent = p2.name;
-    charImg2.src = p2.img;
-    charImg2.alt = p2.name;
-    p2magicLevel.textContent = p2.magic;
-    p2cunningLevel.textContent = p2.cunning;
-    p2courageLevel.textContent = p2.courage;
-    p2wisdomLevel.textContent = p2.wisdom;
-    p2temperLevel.textContent = p2.temper;
-}
-
-
-
 //Start and New Game button
 //define players and score
 
@@ -88,18 +63,64 @@ let pScore2 = 0;
 
 const newGameBtn = document.querySelector("#newGameBtn");
 
+const p1Cont = document.querySelector("#p1Cont");
+const p2Cont = document.querySelector("#p2Cont");
+
+const p1Details = document.querySelector("#player1");
+const p2Details = document.querySelector("#player2");
+
+let turnStatus = document.querySelector("#turnStatus");
+
 newGameBtn.addEventListener('click', event => {
     window.location.reload();
 });
 
+const hideCard = () => {
+    if(currentPlayer === 1) {
+        p2Cont.classList.add("hideCard");
+        p2Details.style.display = "none";
+    } else {
+        p1Cont.classList.add("hideCard");
+        p1Details.style.display = "none";
+    }
+}
+
 const gameInit = () => {
     currentPlayer = pickAPlayer();
-    console.log(currentPlayer)
-    p1Card();
-    p2Card();
+    hideCard();
+    turnStatus.textContent = `Player ${currentPlayer}`;
+    console.log(currentPlayer);
 }
 
 gameInit();
+
+p1charName.textContent = currentCard1.name;
+charImg1.src = currentCard1.imgs;
+charImg1.alt = currentCard1.name;
+p1magicLevel.textContent = currentCard1.magic;
+p1cunningLevel.textContent = currentCard1.cunning;
+p1courageLevel.textContent = currentCard1.courage;
+p1wisdomLevel.textContent = currentCard1.wisdom;
+p1temperLevel.textContent = currentCard1.temper;
+
+p2charName.textContent = currentCard2.name;
+charImg2.src = currentCard2.imgs;
+charImg2.alt = currentCard2.name;
+p2magicLevel.textContent = currentCard2.magic;
+p2cunningLevel.textContent = currentCard2.cunning;
+p2courageLevel.textContent = currentCard2.courage;
+p2wisdomLevel.textContent = currentCard2.wisdom;
+p2temperLevel.textContent = currentCard2.temper;
+
+
+
+
+
+/*
+// OLD MINDSET CODES 
+
+
+
 
 // Game Rules for Win and Lose - compare and add score and delete the card
 
@@ -209,82 +230,86 @@ const compareTemperLevel = () => {
 
 //Magic Level Comparison
 
-const checkMagic = document.querySelectorAll(".magic");
+const checkMagic = document.getElementsByClassName(".magic");
 
-for (let b in checkMagic){
-    checkMagic[b].addEventListener("click", () => {
-        if(currentPlayer === 1) {
-            compareMagicLevel();
-            p2Card();
-        } else {
-            compareMagicLevel();
-            p1Card()
-        }
-    });
+const checkMagicLevel = () => {
+    if(currentPlayer === 1) {
+        checkMagic[0].addEventListener("click", () => {
+        compareMagicLevel();
+    })
+    } else {
+        checkMagic[1].addEventListener("click", () => {
+        compareMagicLevel();
+    })
+    }
 }
+
 //Cunning Level Comparison
 
 const checkCunning = document.querySelectorAll(".cunning");
 
-for (let b in checkCunning){
-    checkCunning[b].addEventListener("click", () => {
-        if(currentPlayer === 1) {
-            compareCunningLevel();
-            p2Card();
-        } else {
-            compareCunningLevel();
-            p1Card()
-        }
-    })
-};
+const checkCunningLevel = () => {
+    if(currentPlayer === 1) {
+        checkCunning[0].addEventListener("click", () => {
+        compareCunningLevel();
+        })
+    } else {
+        checkCunning[1].addEventListener("click", () => {
+        compareCunningLevel();
+        })
+    }
+}
 
 //Courage Level Comparison
 
 const checkCourage = document.querySelectorAll(".courage");
 
-for (let b in checkCourage){
-    checkCourage[b].addEventListener("click", () => {
-        if(currentPlayer === 1) {
-            compareCourageLevel();
-            p2Card();
-        } else {
-            compareCourageLevel();
-            p1Card()
-        }
-    });
+const checkCourageLevel = () => {
+    if(currentPlayer === 1) {
+        checkCourage[0].addEventListener("click", () => {
+        compareCourageLevel();
+        })
+    } else {
+        checkCourage[1].addEventListener("click", () => {
+        compareCourageLevel();
+        })
+    }
 }
 
 //Wisdom Level Comparison
 
 const checkWisdom = document.querySelectorAll(".wisdom");
 
-for (let b in checkWisdom){
-    checkWisdom[b].addEventListener("click", () => {
-        if(currentPlayer === 1) {
-            compareWisdomLevel();
-            p2Card();
-        } else {
-            compareWisdomLevel();
-            p1Card()
-        }
-    });
+const checkWisdomLevel = () => {
+    if(currentPlayer === 1) {
+        checkWisdom[0].addEventListener("click", () => {
+        compareWisdomLevel();
+    })
+    } else {
+        checkWisdom[1].addEventListener("click", () => {
+        compareWisdomLevel();
+    })
+    }
 }
 
 //Temper Level Comparison
 
 const checkTemper = document.querySelectorAll(".temper");
 
-for (let b in checkTemper){
-    checkTemper[b].addEventListener("click", () => {
-        if(currentPlayer === 1) {
-            compareTemperLevel();
-            p2Card();
-        } else {
-            compareTemperLevel();
-            p1Card()
-        }
-    });
+const checkTemperLevel = () => {
+    if(currentPlayer === 1) {
+        checkTemper[0].addEventListener("click", () => {
+        compareTemperLevel();
+        p2Card();
+        })
+    } else {
+        checkTemper[1].addEventListener("click", () => {
+        compareTemperLevel();
+        p1Card()
+        })
+    }
 }
+ */
 //it doesn't change the card after the result
 //also only magic button works but it give error as well
 
