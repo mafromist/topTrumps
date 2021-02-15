@@ -234,15 +234,6 @@ const cardData = [
       "temper": 25
     },
     {
-      "name": "Dean Thomas",
-      "imgs": "../topTrumps/img/DeanThomas.jpg",
-      "magic": 45,
-      "cunning": 20,
-      "courage": 50,
-      "wisdom": 26,
-      "temper": 6
-    },
-    {
       "name": "Gregory Goyle",
       "imgs": "../topTrumps/img/Gregory_Goyle.jpg",
       "magic": 18,
@@ -263,28 +254,41 @@ const cardData = [
   
   ];
 
-console.log(cardData.length)
 
 /* let cardNum = Math.floor(Math.random() * (cardData.length));
 
 const randCard = cardData[cardNum];
  */
-class Card {
-    constructor(cardNum){
-        this.cardNum = cardNum = Math.floor(Math.random() * (cardData.length));
-        this.name = cardData[cardNum].name;
-        this.img = cardData[cardNum].imgs;
-        this.magic = cardData[cardNum].magic;
-        this.cunning = cardData[cardNum].cunning;
-        this.courage = cardData[cardNum].courage;
-        this.wisdom = cardData[cardNum].wisdom;
-        this.temper = cardData[cardNum].temper;
-    }
+/* class Card {
+  constructor(){
+      this.name = cardData[cardNum].name;
+      this.img = cardData[cardNum].imgs;
+      this.magic = cardData[cardNum].magic;
+      this.cunning = cardData[cardNum].cunning;
+      this.courage = cardData[cardNum].courage;
+      this.wisdom = cardData[cardNum].wisdom;
+      this.temper = cardData[cardNum].temper;
+  }
 
+
+} */
+
+let gameCards = []
+let p1Cards = []
+let p2Cards = []
+
+const createCards = () => {
+  for(let i = 0; i < cardData.length; i++) {
+    gameCards[i] = cardData[(Math.floor(Math.random() * 28))]
+  }
+  p1Cards = gameCards.slice(0, 14)
+  p2Cards = gameCards.slice(14, 28)
 }
 
-let p1 = new Card ();
-let p2 = new Card ();
+createCards();
+
+let currentCard1 = p1Cards[(Math.floor(Math.random() * 14))]
+let currentCard2 = p2Cards[(Math.floor(Math.random() * 14))]
 
 
 

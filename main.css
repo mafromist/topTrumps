@@ -34,7 +34,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: -3%;
+    margin-top: -5%;
 }
 
 footer{
@@ -55,8 +55,7 @@ footer{
     box-shadow: 1px 1px 10px rgb(255, 255, 255);
     border-radius: 30px;
     padding-top: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
+    text-align: center;
 }
 
 #newGameBtn {
@@ -66,6 +65,21 @@ footer{
     color: #aec3b0;
     font-family: 'Harry Potter Regular';
     margin: 5px auto;
+}
+
+.hideCard {
+    background-color: #01161e;
+    background-image: url(../topTrumps/img/hiddenCardBg.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: width 1s, height 1.5s;
+    width: 500px;
+    height: 860px;
+}
+
+.hideCard:hover {
+    border-radius: 100px;
+    box-shadow: 3px 3px 30px #aec3b0;
 }
 
 .credits {
@@ -114,14 +128,16 @@ h4 {
     background-color: #01161e;
     border-radius: 40px;
     text-align: center;
-    min-width: 45vh;
+    min-width: 500px;
+    max-height: 860px;
 }
 
 .attrCont {
     margin: 5% auto;
-    width: 35vh;
+    width: 340px;
     border-radius: 10px;
     background-color: #EFF6E0;
+    padding: 5px;
 }
 
 .attribute {
@@ -140,7 +156,7 @@ h4 {
 .p1Score, .p2Score {
     font-family: 'Harry Potter Regular';
     color: white;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .name {
