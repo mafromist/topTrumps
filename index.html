@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +10,14 @@
     <link rel="stylesheet" type="text/css" href="../topTrumps/main.css">
     <title>Harry Potter - Top Trumps Game</title>
 </head>
+
 <body>
 
     <header>
         <h1>Top Trump Game for Harry Potter Fans</h1>
         <h2>Pick your greatest features to win the Game</h2>
     </header>
-    
+
     <main>
 
         <div class="playerCont" id="p1Cont">
@@ -28,38 +30,42 @@
 
                 <div class="attrCont">
                     <div class="attribute name">
-                        <h4>Character Name
-                        <h3 class="charName" id="p1charName">Cho</h3></h4>
+                        <h4 class="charNameTitle">Character Name
+                            <h3 class="charName" id="p1charName">Cho</h3>
+                        </h4>
                     </div>
-                    <div class="attribute magic">
-                        <h4>Magic <i class="fas fa-magic"></i></i>
-                        <span class="levels" id="p1magicLevel">30</span></h4>
-                    </div>
-                    <div class="attribute cunning">
-                        <h4>Cunning <i class="fas fa-hat-wizard"></i>
-                        <span class="levels" id="p1cunningLevel">30</span></h4>
-                    </div>
-                    <div class="attribute courage">
-                        <h4>Courage <i class="fas fa-quidditch"></i>
-                        <span class="levels" id="p1courageLevel">30</span></h4>
-                    </div>
-                    <div class="attribute wisdom">
-                        <h4>Wisdom <i class="fas fa-mountain"></i>
-                        <span class="levels" id="p1wisdomLevel">30</span></h4>
-                    </div>
-                    <div class="attribute temper">
-                        <h4>Temper <i class="fas fa-book-dead"></i>
-                        <span class="levels" id="p1temperLevel">30</span></h4>
+                    <div class="levelAttributes">
+                        <div class="attribute magic">
+                            <button class="levelAttr">Magic <i class="fas fa-magic"></i></i>
+                                <span class="levels" id="p1magicLevel">30</span></button>
+                        </div>
+                        <div class="attribute cunning">
+                            <button class="levelAttr">Cunning <i class="fas fa-hat-wizard"></i>
+                                <span class="levels" id="p1cunningLevel">30</span></button>
+                        </div>
+                        <div class="attribute courage">
+                            <button class="levelAttr">Courage <i class="fas fa-quidditch"></i>
+                                <span class="levels" id="p1courageLevel">30</span></button>
+                        </div>
+                        <div class="attribute wisdom">
+                            <button class="levelAttr">Wisdom <i class="fas fa-mountain"></i>
+                                <span class="levels" id="p1wisdomLevel">30</span></button>
+                        </div>
+                        <div class="attribute temper">
+                            <button class="levelAttr">Temper <i class="fas fa-book-dead"></i>
+                                <span class="levels" id="p1temperLevel">30</span></button>
+                        </div>
                     </div>
                 </div>
 
                 <div class="player1ScoreDiv">
                     <h3 class="p1Score">Score
-                    <span id="p1Score"></span></h3>
+                        <span id="p1Score"></span>
+                    </h3>
                 </div>
             </div>
         </div>
-        
+
         <div class="playerCont" id="p2Cont">
 
             <div class="players" id="player2"><span>Player 2</span>
@@ -69,55 +75,67 @@
                 </div>
 
                 <div class="attrCont">
-                    <div class="attribute name">
-                        <h4>Character Name
-                        <h3 class="charName" id="p2charName">Argus</h3></h4>
+                        <div class="attribute name">
+                            <h4 class="charNameTitle">Character Name
+                                <h3 class="charName" id="p2charName">Argus</h3>
+                            </h4>
+                        </div>
+                        <div class="levelAttributes">
+                            <div class="attribute magic">
+                                <button class="levelAttr">Magic <i class="fas fa-magic"></i></i>
+                                    <span class="levels" id="p2magicLevel">30</span></h4>
+                            </div>
+                            <div class="attribute cunning">
+                                <button class="levelAttr">Cunning <i class="fas fa-hat-wizard"></i>
+                                    <span class="levels" id="p2cunningLevel">30</span></button>
+                            </div>
+                            <div class="attribute courage">
+                                <button class="levelAttr">Courage <i class="fas fa-quidditch"></i></i>
+                                    <span class="levels" id="p2courageLevel">30</span></h4>
+                            </div>
+                            <div class="attribute wisdom">
+                                <button class="levelAttr">Wisdom <i class="fas fa-mountain"></i>
+                                    <span class="levels" id="p2wisdomLevel">30</span></button>
+                            </div>
+                            <div class="attribute temper">
+                                <button class="levelAttr">Temper <i class="fas fa-book-dead"></i>
+                                    <span class="levels" id="p2temperLevel">30</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="attribute magic">
-                        <h4>Magic <i class="fas fa-magic"></i></i>
-                        <span class="levels" id="p2magicLevel">30</span></h4>
-                    </div>
-                    <div class="attribute cunning">
-                        <h4>Cunning <i class="fas fa-hat-wizard"></i>
-                        <span class="levels" id="p2cunningLevel">30</span></h4>
-                    </div>
-                    <div class="attribute courage">
-                        <h4>Courage <i class="fas fa-quidditch"></i></i>
-                        <span class="levels" id="p2courageLevel">30</span></h4>
-                    </div>
-                    <div class="attribute wisdom">
-                        <h4>Wisdom <i class="fas fa-mountain"></i>
-                        <span class="levels" id="p2wisdomLevel">30</span></h4>
-                    </div>
-                    <div class="attribute temper">
-                        <h4>Temper <i class="fas fa-book-dead"></i>
-                        <span class="levels" id="p2temperLevel">30</span></h4>
-                    </div>
-                </div>
 
-                <div class="player2ScoreDiv">
-                    <h3 class="p2Score">Score
-                    <span id="p2Score"></span></h3>
+                    <div class="player2ScoreDiv">
+                        <h3 class="p2Score">Score
+                            <span id="p2Score"></span>
+                        </h3>
+                    </div>
                 </div>
-            </div>  
-        </div>
-        
+            </div>
+
     </main>
 
     <footer>
         <div class="gameButtons">
+
+            <div class="roundArea">
+                <h3>Round<span id="roundNumber"> 0</span></h3>
+            </div>
+            <button id="nextCardBtn">
+                Next Card
+            </button>
             <div>
                 <h3>Turn for <span id="turnStatus"></span></h3>
-            </div>    
+            </div>
             <div class="newGameBtn">
-                <button id="newGameBtn">New Game</button>
+                <button id="newGameBtn">New Game </button>
             </div>
         </div>
         <div class="credits">
-            Some magic from  <a href="https://github.com/mafromist">@mafromist</a> 
+            Some magic from <a href="https://github.com/mafromist">@mafromist</a>
         </div>
     </footer>
-    
+
     <script src="../topTrumps/app.js"></script>
 </body>
+
 </html>

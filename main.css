@@ -7,6 +7,13 @@
     src: local('Harry Potter Regular'), url('../topTrumps/fonts/HARRP___.woff') format('woff');
     }
 
+@media (max-width: 700px) {
+    footer {
+        flex-direction: column;
+        align-content: space-between;
+    }
+}
+
 
 body {
     background-image: url(../topTrumps/img/bgImg3.png);
@@ -38,8 +45,7 @@ main {
 }
 
 footer{
-    margin: auto;
-    margin-top: -5%;
+    margin: -15% auto 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -50,12 +56,19 @@ footer{
     font-size: 1.2em;
 }
 
+.gameButtons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .newGameBtn {
     background-color: rgba(89, 89, 89, 0.762);
     box-shadow: 1px 1px 10px rgb(255, 255, 255);
     border-radius: 30px;
     padding-top: 5px;
     text-align: center;
+    padding: auto 20px;
 }
 
 #newGameBtn {
@@ -65,6 +78,28 @@ footer{
     color: #aec3b0;
     font-family: 'Harry Potter Regular';
     margin: 5px auto;
+    height: 4vh;
+}
+
+#newGameBtn:hover {
+    color: white;
+}
+
+#nextCardBtn {
+    background-color: gold;
+    border: none;
+    font-size: 1.2em;
+    color: #01161e;
+    font-family: 'Harry Potter Regular';
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 20px;
+    line-height: 1.2;
+}
+
+#nextCardBtn:hover {
+    color: white;
 }
 
 .hideCard {
@@ -99,8 +134,28 @@ h3 {
     line-height: 0.7;
 }
 
-h4 {
-    line-height: 0.2;
+h4{
+    line-height: 0.8;
+}
+
+.charNameTitle {
+    margin: 3% 0 0 0;
+}
+
+.levelAttr {
+    line-height: 0.8;
+    background-color: transparent;
+    border: none;
+    width: 80%;
+    font-size: 0.9em;
+    font-family: 'Barlow', sans-serif;
+    color: #124559;
+    padding: 2%;
+}
+
+.levelAttr:hover {
+    background-color: #12455970;
+    border-radius: 15px;
 }
 
 .players {
