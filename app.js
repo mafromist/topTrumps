@@ -1,6 +1,5 @@
 /* import { createCards } from 'newData';
 
-
  */ /*Background about the game
 The game is played taking turns between one players’ hand of 15 cards 
     AND the other player’s hand. 
@@ -97,9 +96,14 @@ const hideCard = () => {
 };
 
 const drawP1Card = () => {
-  p1charName.textContent = name1;
+  p1charName.textContent = name1
   charImg1.src = img1;
   charImg1.alt = name1;
+  p1magicLevel.textContent = currentCard1.magic;
+  p1cunningLevel.textContent = currentCard1.cunning;
+  p1courageLevel.textContent = currentCard1.courage;
+  p1wisdomLevel.textContent = currentCard1.wisdom;
+  p1temperLevel.textContent = currentCard1.temper;
 };
 
 levels[0].dataset.level.value = magicLevel1;
@@ -114,12 +118,6 @@ levels[7].dataset.level.textContent = courageLevel2;
 levels[8].dataset.level.textContent = wisdomLevel2;
 levels[9].dataset.level.textContent = temperLevel2;
 
-console.log(levels);
-console.log(levels[0].dataset.type);
-console.log(levels[0].dataset.level);
-console.log(magicLevel1);
-console.log(levels[0].dataset.level);
-console.log(levels[0].dataset.level.value);
 
 const drawP2Card = () => {
   p2charName.textContent = currentCard2.name;
@@ -153,7 +151,7 @@ const revealCard = () => {
   newCardBtn.style.display = "block";
 };
 
-/* const winnerHand = (a, b) => {
+const winnerHand = (a, b) => {
   if (a > b) {
     alert("P1 won the turn");
     pScore1 += 1;
@@ -169,7 +167,7 @@ const revealCard = () => {
     tieScore++;
     console.log(currentPlayer);
   }
-}; */
+};
 
 //newCardBtn Function
 // step 1 - check currentPlayer
@@ -179,25 +177,22 @@ const revealCard = () => {
 // step 5 - if currentPlayer lost change the currentPlayer to opposite
 // step 6 - add to round value + 1
 
-const winnerHand = (a, b) => {
-  const drawNewCards = () => {
-    newCardBtn.addEventListener("click", () => {
-      getNextCards();
-      if (currentPlayer == 1) {
-        hideCard();
-        drawP1Card();
-        drawP2Card();
-        p1Score += tieScore;
-      } else {
-        hideCard();
-        drawP1Card();
-        drawP2Card();
-        p2Score += tieScore;
-      }
-      round++;
-    });
-  };
-};
+const drawNewCards = () => {
+  newCardBtn.addEventListener("click", () => {
+    getNextCards();
+  if (currentPlayer == 1) {
+    hideCard();
+    drawP1Card();
+    drawP2Card();
+    p1Score += tieScore;
+  } else {
+    hideCard();
+    drawP1Card();
+    drawP2Card();
+    p2Score += tieScore;
+  }
+  round++;
+})};
 
 ///// FUNCTIONS TO COMPARE THE LEVELS
 
@@ -225,22 +220,11 @@ const selectAttributes = () => {
 newGameBtn.addEventListener("click", () => {
   createCards();
   gameInit();
+  getNextCards();
   newCardBtn.style.display = "none";
 });
 
-newCardBtn.addEventListener("click", () => {
-  if (round < 15) {
-    selectAttributes();
-  } else {
-    if (p1Score > p2Score) {
-      alert("P1 WINS!");
-    } else {
-      alert("P2 WINS!");
-    }
-  }
-});
-
-/*   const playGame = () => {
+  const playGame = () => {
     gameInit();
     if (round < 15) {
       selectAttributes();
@@ -255,7 +239,7 @@ newCardBtn.addEventListener("click", () => {
     }
   }
 
-  playGame(); */
+  playGame();
 
 /*
 

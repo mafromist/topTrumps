@@ -272,11 +272,6 @@ createCards();
 let currentCard1 = p1Cards[Math.floor(Math.random() * 14)];
 let currentCard2 = p2Cards[Math.floor(Math.random() * 14)];
 
-const getNextCards = () => {
-  currentCard1 = p1Cards[Math.floor(Math.random() * 14)];
-  currentCard2 = p2Cards[Math.floor(Math.random() * 14)];
-};
-
 let img1 = currentCard1.imgs;
 let img2 = currentCard2.imgs;
 
@@ -297,6 +292,34 @@ let wisdomLevel2 = currentCard2["wisdom"];
 
 let temperLevel1 = currentCard1["temper"];
 let temperLevel2 = currentCard2["temper"];
+
+const getNextCards = () => {
+  currentCard1 = p1Cards[Math.floor(Math.random() * 14)];
+  currentCard2 = p2Cards[Math.floor(Math.random() * 14)];
+  
+  img1 = currentCard1.imgs;
+  img2 = currentCard2.imgs;
+
+  name1 = currentCard1.name;
+  name2 = currentCard2.name;
+
+  magicLevel1 = currentCard1["magic"];
+  magicLevel2 = currentCard2["magic"];
+
+  cunningLevel1 = currentCard1["cunning"];
+  cunningLevel2 = currentCard2["cunning"];
+
+  courageLevel1 = currentCard1["courage"];
+  courageLevel2 = currentCard2["courage"];
+
+  wisdomLevel1 = currentCard1["wisdom"];
+  wisdomLevel2 = currentCard2["wisdom"];
+
+  temperLevel1 = currentCard1["temper"];
+  temperLevel2 = currentCard2["temper"];
+};
+
+
 
 /* let cardNum = Math.floor(Math.random() * (cardData.length));
 
