@@ -1,4 +1,7 @@
-/*Background about the game
+/* import { createCards } from 'newData';
+
+
+ */ /*Background about the game
 The game is played taking turns between one players’ hand of 15 cards 
     AND the other player’s hand. 
 
@@ -31,7 +34,6 @@ const { current } = require("tap");
 // add score to the player1Score
 
 //DOM selection from HTML for player and chosen card and an attribute
-const levels = document.getElementsByClassName("levels");
 
 const p1charName = document.querySelector("#p1charName");
 const charImg1 = document.querySelector("#charImg1");
@@ -50,6 +52,8 @@ const p2courageLevel = document.querySelector("#p2courageLevel");
 const p2wisdomLevel = document.querySelector("#p2wisdomLevel");
 const p2temperLevel = document.querySelector("#p2temperLevel");
 const player2Score = document.querySelector("#p2Score");
+
+const levels = document.querySelectorAll(".levels");
 
 const newGameBtn = document.querySelector("#newGameBtn");
 
@@ -76,33 +80,46 @@ let round = 0;
 
 const pickAPlayer = () => Math.round(Math.random() + 1);
 
-newGameBtn.addEventListener("click", (event) => {
-  window.location.reload();
-  newCardBtn.style.display = "none";
-});
-
 const hideCard = () => {
   if (currentPlayer === 1) {
     p2Cont.classList.add("hideCard");
+    p1Cont.classList.remove("hideCard");
     p2Details.style.display = "none";
+    p1Details.style.display = "block";
     newCardBtn.style.display = "none";
   } else {
     p1Cont.classList.add("hideCard");
+    p2Cont.classList.remove("hideCard");
     p1Details.style.display = "none";
+    p2Details.style.display = "block";
     newCardBtn.style.display = "none";
   }
 };
 
 const drawP1Card = () => {
-  p1charName.textContent = currentCard1.name;
-  charImg1.src = currentCard1.imgs;
-  charImg1.alt = currentCard1.name;
-  p1magicLevel.textContent = currentCard1.magic;
-  p1cunningLevel.textContent = currentCard1.cunning;
-  p1courageLevel.textContent = currentCard1.courage;
-  p1wisdomLevel.textContent = currentCard1.wisdom;
-  p1temperLevel.textContent = currentCard1.temper;
+  p1charName.textContent = name1;
+  charImg1.src = img1;
+  charImg1.alt = name1;
 };
+
+levels[0].dataset.level.value = magicLevel1;
+levels[1].dataset.level.value = cunningLevel1;
+levels[2].dataset.level.value = courageLevel1;
+levels[3].dataset.level.value = wisdomLevel1;
+levels[4].dataset.level.value = temperLevel1;
+
+levels[5].dataset.level.textContent = magicLevel2;
+levels[6].dataset.level.textContent = cunningLevel2;
+levels[7].dataset.level.textContent = courageLevel2;
+levels[8].dataset.level.textContent = wisdomLevel2;
+levels[9].dataset.level.textContent = temperLevel2;
+
+console.log(levels);
+console.log(levels[0].dataset.type);
+console.log(levels[0].dataset.level);
+console.log(magicLevel1);
+console.log(levels[0].dataset.level);
+console.log(levels[0].dataset.level.value);
 
 const drawP2Card = () => {
   p2charName.textContent = currentCard2.name;
@@ -136,7 +153,7 @@ const revealCard = () => {
   newCardBtn.style.display = "block";
 };
 
-const winnerHand = (a, b) => {
+/* const winnerHand = (a, b) => {
   if (a > b) {
     alert("P1 won the turn");
     pScore1 += 1;
@@ -152,7 +169,7 @@ const winnerHand = (a, b) => {
     tieScore++;
     console.log(currentPlayer);
   }
-};
+}; */
 
 //newCardBtn Function
 // step 1 - check currentPlayer
@@ -162,28 +179,85 @@ const winnerHand = (a, b) => {
 // step 5 - if currentPlayer lost change the currentPlayer to opposite
 // step 6 - add to round value + 1
 
-const drawNewCards = () => {
-  newCardBtn.addEventListener("click", () => {
-    if (currentPlayer == 1) {
-      hideCard();
-      drawP1Card();
-      drawP2Card();
-      p1Score += tieScore;
-    } else {
-      hideCard();
-      drawP1Card();
-      drawP2Card();
-      p2Score += tieScore;
-    }
-  });
-  round++;
+const winnerHand = (a, b) => {
+  const drawNewCards = () => {
+    newCardBtn.addEventListener("click", () => {
+      getNextCards();
+      if (currentPlayer == 1) {
+        hideCard();
+        drawP1Card();
+        drawP2Card();
+        p1Score += tieScore;
+      } else {
+        hideCard();
+        drawP1Card();
+        drawP2Card();
+        p2Score += tieScore;
+      }
+      round++;
+    });
+  };
 };
 
-// OLD MINDSET CODES
+///// FUNCTIONS TO COMPARE THE LEVELS
 
-// Game Rules for Win and Lose - compare and add score and delete the card
+const selectAttributes = () => {
+  if (currentPlayer == 1) {
+    levelAttrs[0].children.forEach((selection, i) => {
+      levelAttrs[0].children[i].addEventListener("click", () => {
+        winnerHand(currentCard1[0][selection], currentCard2[0][selection]);
+        console.log(currentCard1[0][selection]);
+        revealCard();
+      });
+    });
 
-///// FUNCTION TO COMPARE THE LEVELS
+    if (currentPlayer === 2) {
+      levelAttrs[1].children.forEach((selection, i) => {
+        levelAttrs[0].children[i].addEventListener("click", () => {
+          winnerHand(currentCard1[i][selection], currentCard2[i][selection]);
+          revealCard();
+        });
+      });
+    }
+  }
+};
+
+newGameBtn.addEventListener("click", () => {
+  createCards();
+  gameInit();
+  newCardBtn.style.display = "none";
+});
+
+newCardBtn.addEventListener("click", () => {
+  if (round < 15) {
+    selectAttributes();
+  } else {
+    if (p1Score > p2Score) {
+      alert("P1 WINS!");
+    } else {
+      alert("P2 WINS!");
+    }
+  }
+});
+
+/*   const playGame = () => {
+    gameInit();
+    if (round < 15) {
+      selectAttributes();
+      drawNewCards();
+    } else {
+      if (p1Score > p2Score) {
+        alert("P1 WINS!");
+      } else {
+        alert("P2 WINS!");
+      }
+
+    }
+  }
+
+  playGame(); */
+
+/*
 
 const checkMagicLevel = () => {
   if (currentPlayer === 1) {
@@ -237,12 +311,6 @@ const checkCourageLevel = () => {
 
 checkCourageLevel();
 
-console.log(levelAttrs[0].children[3]);
-console.log(levelAttrs[0].children[4]);
-
-console.log(levelAttrs[1].children[3]);
-console.log(levelAttrs[1].children[4]);
-
 //Wisdom Level Comparison
 
 const checkWisdomLevel = () => {
@@ -278,12 +346,7 @@ const checkTemperLevel = () => {
     });
   }
 };
-checkTemperLevel();
-
-
-gameInit();
-
-drawNewCards();
+checkTemperLevel(); */
 
 //it doesn't change the card after the result
 //also only magic button works but it give error as well
@@ -292,11 +355,13 @@ drawNewCards();
 
 // changing the src of an Img property => charImg1.src = "../topTrumps/img/argusFilch.jpg"
 
-/* extras 
+/* extras
     //add a class to close the card so whose turn cannot see the other card
         therefore the game could be more enjoyable if you won't see the other card values
 
 */
+
+////Old version of level comparison functions
 
 //Magic Level Comparison
 /* const compareMagicLevel = () => {
